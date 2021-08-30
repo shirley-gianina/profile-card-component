@@ -1,0 +1,141 @@
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --gray-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-color: var(--dark-cyan);
+    background-repeat: no-repeat;
+    background-position: 0vw -40vh, 50vw 40vh;
+    background-size: contain;
+    text-align: center;
+}
+
+.text-gray {
+    color: var(--dark-gray);
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.profile-card {
+    display: grid;
+    grid-template-rows: 35% 40% 25%;
+    background-color: white ;
+    height: 400px;
+    width: 380px;
+    border-radius: 15px;
+
+}
+
+.profile-card .card-header {
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url('../images/bg-pattern-card.svg');
+}
+
+.profile-card .card-header img {
+    position: absolute;
+    bottom: -50px;
+    left: calc(50% - 50px);
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.profile-card .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.profile-card .card-body p {
+    line-height: 30px;
+}
+
+.profile-card .card-body span {
+    margin-left: 10px;
+    font-weight: 700;
+    
+}
+
+.profile-card .card-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 0.5px solid var(--dark-gray);
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card .card-footer p {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ----------------------------------Media Queries---------------------------- */
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        background-position: -42vw -134px, 46vw 136%;
+    }
+
+    .profile-card {
+        max-width: 300px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        background-position: -27vw -338px, 41vw 411px;
+    }
+
+    .profile-card {
+        max-width: 300px;
+        height: 300px;
+    }
+
+}
